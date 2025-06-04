@@ -11,7 +11,7 @@ clean:
 	rm -rf patrik *.o
 
 patrik: core.o map.o character.o enemy.o player.o patrik.o
-	$(CC) $(LDFLAGS) core.o map.o character.o enemy.o player.o patrik.o -o patrik
+	$(CC) core.o map.o character.o enemy.o player.o patrik.o -o patrik $(LDFLAGS)
 
 core.o: core.cpp
 	$(CC) $(CFLAGS) core.cpp
